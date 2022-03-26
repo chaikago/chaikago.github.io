@@ -1,6 +1,6 @@
 * {
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
 }
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -25,4 +25,64 @@ time, mark, audio, video {
 :active, :hover, :focus {
     outline: 0!important;
     outline-offset: 0!important;
+}
+body {
+    font-size: 14px;
+    line-height: 1.2;
+    color: #ffffff;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #211f27;
+}
+.material-icons-outlined {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+.container {
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+header .header-nav {
+    width: 100%;
+    display: flex;
+    list-style: none;
+}
+header .header-nav .nav-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+header .header-nav .nav-item a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+
+main {
+    height: 200vh;
 }
