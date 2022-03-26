@@ -1,6 +1,9 @@
 * {
-	-webkit-box-sizing: content-box;
-	box-sizing: content-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+html {
+    font-size: 16px;
 }
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -27,7 +30,7 @@ time, mark, audio, video {
     outline-offset: 0!important;
 }
 body {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.2;
     color: #ffffff;
     font-family: 'Roboto Condensed', sans-serif;
@@ -54,35 +57,95 @@ body {
     /* Support for IE. */
     font-feature-settings: 'liga';
 }
+.btn {
+    padding: 12px 32px;
+    font-size: 0.8em;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #0bceaf;
+    transition: border-radius 0.3s ease-out 0ms, background-color 0.3s ease-out 0ms;
+    border-radius: 16px;
+}
+.btn:hover {
+    border-radius: 3px;
+    background-color: #6b019c;
+}
+
 .container {
+    width: 100%;
     max-width: 1320px;
     margin-left: auto;
     margin-right: auto;
 }
 
-header {
+.header {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    flex-direction: column;
 }
 
-header .header-nav {
+.navbar .nav-list {
     width: 100%;
+    max-width: 1320px;
     display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    padding: 20px;
     list-style: none;
 }
-header .header-nav .nav-item {
+.navbar .nav-list .nav-item {
     display: flex;
     align-items: center;
-    padding: 10px 20px;
+    padding: 0px 10px;
 }
-header .header-nav .nav-item a {
+.navbar .nav-list .nav-item a {
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.5s ease-out 0ms;
+}
+.navbar .nav-list .nav-item a:hover {
+    color: #0bceaf;
+}
+.navbar .nav-list .nav-logo {
+    margin-right: auto;
+}
+.navbar .nav-list .nav-logo a {
+    font-size: 36px;
+    font-weight: bold;
     color: #ffffff;
     text-decoration: none;
 }
 
-
-
-main {
-    height: 200vh;
+.hello {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex: auto;
+    background: url(/img/castle.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hello ul {
+    padding: 20px;
+    list-style: none;
+}
+.hello ul li {
+    margin-bottom: 32px;
+}
+.hello li.name {
+    margin-bottom: 8px;
+    font-size: 1.3em;
+}
+.hello li.career {
+    font-size: 4em;
+    font-weight: bold;
+}
+.hello li.link {
+    
 }
